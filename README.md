@@ -1,7 +1,10 @@
 ````markdown
 # Renewly Landing Page SPA
 
-A **Single Page Application (SPA)** built with **React, TypeScript, and Tailwind CSS**. This project implements a modern landing page design and serves as a clean foundation for future feature development.
+A **Single Page Application (SPA)** built with
+**React, TypeScript, and Tailwind CSS**.
+This project implements a modern landing page design
+and serves as a clean foundation for future feature development.
 
 ---
 
