@@ -1,17 +1,7 @@
 import { useState } from "react";
 import Button from "../components/Button";
 import { X } from "lucide-react";
-
-const Container: React.FC<{
-  children: React.ReactNode;
-  className?: string;
-}> = ({ children, className = "" }) => {
-  return (
-    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
-      {children}
-    </div>
-  );
-};
+import { Container } from "../components/Container";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
