@@ -1,4 +1,4 @@
-```markdown
+````markdown
 # Renewly Landing Page SPA
 
 A **Single Page Application (SPA)** built with **React, TypeScript, and Tailwind CSS**. This project implements a modern landing page design and serves as a clean foundation for future feature development.
@@ -17,8 +17,8 @@ A **Single Page Application (SPA)** built with **React, TypeScript, and Tailwind
 ---
 
 ## 📂 Project Structure
-```
 
+```plaintext
 src/
 ├── assets/ # images, logos
 ├── components/ # small reusable UI
@@ -42,7 +42,7 @@ src/
 │ └── LandingPage.tsx
 ├── App.tsx
 └── main.tsx
-
+```
 ````
 
 ---
@@ -50,10 +50,11 @@ src/
 ## 🛠️ Setup Instructions
 
 ### 1. Clone the Repository
+
 ```bash
 git clone <your-repo-url>
 cd <repo-folder>
-````
+```
 
 ### 2. Install Dependencies
 
