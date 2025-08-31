@@ -3,7 +3,7 @@ import Button from "../components/Button";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden text-white bg-[#00265F] min-h-[600px] flex items-center pt-24 pb-20">
+    <section className="relative overflow-hidden text-white bg-[#00265F] min-h-[700px] flex items-center pt-24 pb-20">
       {/* Background for Desktop (full image) */}
       <div
         className="
@@ -29,7 +29,7 @@ const Hero = () => {
 
       {/* Content */}
       <Container className="relative z-10">
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto -mt-6 text-center">
           <h1 className="xl:text-[90px] md:text-6xl text-4xl font-bold mb-6">
             Renew Your Vehicle Papers Online
           </h1>
