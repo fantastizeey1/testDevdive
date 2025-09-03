@@ -7,7 +7,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#00265F] py-1 fixed w-full top-0 z-50">
+    <header className="bg-[#00265F] py-1 fixed w-full px-4 top-0 z-50">
       <Container>
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
@@ -64,7 +64,7 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <Container className="h-screen">
-            <div className="flex flex-col justify-between h-[80vh] py-6">
+            <div className="flex flex-col justify-between h-[8">
               <nav className="py-4 space-y-3">
                 <a href="#services" className="block py-2 text-gray-700">
                   Services

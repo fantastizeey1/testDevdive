@@ -3,7 +3,9 @@ export const Container: React.FC<{
   className?: string;
 }> = ({ children, className = "" }) => {
   return (
-    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
+    <div
+      className={`max-w-[1440px] mx-auto px-4 sm:px-6 xl:px-[150px] ${className}`}
+    >
       {children}
     </div>
   );
