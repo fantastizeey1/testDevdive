@@ -30,7 +30,7 @@ const Hero = () => {
       {/* Content */}
       <Container className="relative z-10">
         <div className="max-w-2xl mx-auto -mt-6 text-center">
-          <h1 className="xl:text-[90px] md:text-6xl text-4xl font-bold mb-6">
+          <h1 className="xl:text-[90px] md:text-6xl text-7xl font-bold mb-6">
             Renew Your Vehicle Papers Online
           </h1>
           <p className="text-xl mb-8 text-blue-100">

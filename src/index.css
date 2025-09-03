@@ -237,7 +237,6 @@
   }
 
   .text-h1 {
-    font-size: var(--text-h1);
     line-height: var(--text-h1--line-height);
     font-weight: var(--text-h1--weight);
     font-family: var(--text-hi--font);

@@ -2,6 +2,7 @@ import Footer from "../layout/Footer";
 import Header from "../layout/Header";
 import Hero from "../sections/Hero";
 import SupportedVehicles from "../sections/SupportedVehicles";
+import WhyChooseUs from "../sections/WhyChooseUs";
 
 const LandingPage = () => {
   return (
@@ -9,6 +10,7 @@ const LandingPage = () => {
       <Header />
       <Hero />
       <SupportedVehicles />
+      <WhyChooseUs />
       <Footer />
     </main>
   );
