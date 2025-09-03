@@ -29,7 +29,7 @@ const Header = () => {
             <div className="bg-white p-[6px] rounded-xl">
               <Button
                 className="bg-white py-1 px-3
-               text-blue-600 shadow-none hover:bg-white hover:shadow-none"
+               text-button shadow-none hover:bg-white hover:shadow-none"
               >
                 Check Estimate
               </Button>
@@ -40,7 +40,7 @@ const Header = () => {
               className="w-20 h-10 absolute left-[110px] "
             />
             <div className="bg-white p-[6px] rounded-xl">
-              <Button className="text-white py-1 px-3 bg-blue-600 ">
+              <Button className="text-white py-1 px-3 bg-button">
                 Get Started
               </Button>
             </div>
@@ -54,7 +54,7 @@ const Header = () => {
             {mobileMenuOpen ? (
               <X className="w-6 h-6 text-white" />
             ) : (
-              <img src="/menu.svg" alt="menu" className="w-6 h-6" />
+              <img src="/icons/menu.svg" alt="menu" className="w-6 h-6" />
             )}
           </button>
         </div>
@@ -63,32 +63,40 @@ const Header = () => {
       {/* Mobile Menu (only < md) */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t">
-          <Container>
-            <nav className="py-4 space-y-3">
-              <a href="#services" className="block py-2 text-gray-700">
-                Services
-              </a>
-              <a href="#vehicles" className="block py-2 text-gray-700">
-                Vehicles
-              </a>
-              <a href="#process" className="block py-2 text-gray-700">
-                How it Works
-              </a>
-              <a href="#pricing" className="block py-2 text-gray-700">
-                Pricing
-              </a>
-              <a href="#contact" className="block py-2 text-gray-700">
-                Contact
-              </a>
-              <div className="pt-4 space-y-2">
-                <Button variant="outline" size="sm" className="w-full">
-                  Sign In
-                </Button>
-                <Button size="sm" className="w-full">
+          <Container className="h-screen">
+            <div className="flex flex-col justify-between h-[80vh] py-6">
+              <nav className="py-4 space-y-3">
+                <a href="#services" className="block py-2 text-gray-700">
+                  Services
+                </a>
+                <a href="#vehicles" className="block py-2 text-gray-700">
+                  Vehicles
+                </a>
+                <a href="#process" className="block py-2 text-gray-700">
+                  How it Works
+                </a>
+                <a href="#pricing" className="block py-2 text-gray-700">
+                  Pricing
+                </a>
+                <a href="#contact" className="block py-2 text-gray-700">
+                  Contact
+                </a>
+              </nav>
+              <div className=" flex flex-row pt-4 space-x-7 itenc-center">
+                <div className="bg-white border-2 border-blue-600 p-[6px] rounded-xl">
+                  <Button
+                    className="bg-white py-1 px-3
+               text-blue-600 shadow-none hover:bg-white hover:shadow-none"
+                  >
+                    Check Estimate
+                  </Button>
+                </div>
+
+                <Button className="text-white rounded-xl py-1 px-5 bg-button">
                   Get Started
                 </Button>
               </div>
-            </nav>
+            </div>
           </Container>
         </div>
       )}

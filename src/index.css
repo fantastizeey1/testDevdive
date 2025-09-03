@@ -1,5 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
+
 @import "tailwindcss";
 
+
 @theme {
-  --color-blue: #00265fe5;
+  /* Colors */
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(222.2 47.4% 11.2%);
+  --color-muted: hsl(210 40% 96.1%);
+  --color-muted-foreground: hsl(215.4 16.3% 46.9%);
+  --color-border: hsl(214.3 31.8% 91.4%);
+  --color-primary: hsl(222.2 47.4% 11.2%);
+  --color-primary-foreground: hsl(210 40% 98%);
+  --color-secondary: hsl(210 40% 96.1%);
+  --color-secondary-foreground: hsl(222.2 47.4% 11.2%);
+  --color-destructive: hsl(0 100% 50%);
+  --color-destructive-foreground: hsl(210 40% 98%);
+  --color-ring: hsl(215 20.2% 65.1%);
+  --color-button: hsl(216 100% 50%);
+
+  /* Radius */
+  --radius: 0.5rem;
+
+  /* Fonts */
+  --font-sans: "Nunito Sans", Helvetica, sans-serif;
+  --font-heading: "Founders Grotesk", Helvetica, sans-serif;
+  --font-ios: "Sofia Pro", Helvetica, sans-serif;
+
+  /* ===========================
+     TYPOGRAPHY UTILITIES
+     =========================== */
+  --text-body-big: 20px;
+  --text-body-big--line-height: normal;
+  --text-body-big--weight: 400;
+
+  --text-body-bigger: 24px;
+  --text-body-bigger--line-height: 36px;
+  --text-body-bigger--weight: 400;
+
+  --text-body-bold: 16px;
+  --text-body-bold--line-height: 24px;
+  --text-body-bold--weight: 700;
+
+  --text-body-button: 14px;
+  --text-body-button--line-height: 21px;
+  --text-body-button--weight: 600;
+
+  --text-body-caption: 12px;
+  --text-body-caption--line-height: 18px;
+  --text-body-caption--weight: 400;
+
+  --text-body-main: 16px;
+  --text-body-main--line-height: 24px;
+  --text-body-main--weight: 400;
+
+  --text-body-small: 14px;
+  --text-body-small--line-height: 21px;
+  --text-body-small--weight: 400;
+
+  --text-display-big: 102px;
+  --text-display-big--line-height: 99px;
+  --text-display-big--weight: 700;
+
+  --text-h1: 64px;
+  --text-h1--line-height: 100%;
+  --text-h1--weight: 700;
+  --text-hi--font: var(--font-sans);
+
+  --text-h3: 48px;
+  --text-h3--line-height: normal;
+  --text-h3--weight: 700;
+
+  --text-h6: 24px;
+  --text-h6--line-height: 36px;
+  --text-h6--weight: 700;
+
+  --text-ios-body-emphasized: 17px;
+  --text-ios-body-emphasized--line-height: 22px;
+  --text-ios-body-emphasized--weight: 500;
+  --text-ios-body-emphasized--tracking: -0.4px;
+
+  --text-ios-subheadline-emphasized: 15px;
+  --text-ios-subheadline-emphasized--line-height: 20px;
+  --text-ios-subheadline-emphasized--weight: 500;
+  --text-ios-subheadline-emphasized--tracking: -0.4px;
+}
+
+/* ===========================
+   ANIMATIONS
+   =========================== */
+@theme {
+  --animate-fade-in: fade-in 1s var(--animation-delay, 0s) ease forwards;
+  --animate-fade-up: fade-up 1s var(--animation-delay, 0s) ease forwards;
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  --animate-shimmer: shimmer 8s infinite;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+/* ===========================
+   BASE STYLES
+   =========================== */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .dark {
+    --color-background: hsl(224 71% 4%);
+    --color-foreground: hsl(213 31% 91%);
+    --color-muted: hsl(223 47% 11%);
+    --color-muted-foreground: hsl(215.4 16.3% 56.9%);
+    --color-border: hsl(216 34% 17%);
+    --color-primary: hsl(210 40% 98%);
+    --color-primary-foreground: hsl(222.2 47.4% 1.2%);
+    --color-secondary: hsl(222.2 47.4% 11.2%);
+    --color-secondary-foreground: hsl(210 40% 98%);
+    --color-destructive: hsl(0 63% 31%);
+    --color-destructive-foreground: hsl(210 40% 98%);
+    --color-ring: hsl(216 34% 17%);
+  }
+}
+
+/* ===========================
+   TYPOGRAPHY CLASSES
+   =========================== */
+@layer utilities {
+  .text-body-big {
+    font-size: var(--text-body-big);
+    line-height: var(--text-body-big--line-height);
+    font-weight: var(--text-body-big--weight);
+  }
+
+  .text-body-bigger {
+    font-size: var(--text-body-bigger);
+    line-height: var(--text-body-bigger--line-height);
+    font-weight: var(--text-body-bigger--weight);
+  }
+
+  .text-body-bold {
+    font-size: var(--text-body-bold);
+    line-height: var(--text-body-bold--line-height);
+    font-weight: var(--text-body-bold--weight);
+  }
+
+  .text-body-button {
+    font-size: var(--text-body-button);
+    line-height: var(--text-body-button--line-height);
+    font-weight: var(--text-body-button--weight);
+  }
+
+  .text-body-caption {
+    font-size: var(--text-body-caption);
+    line-height: var(--text-body-caption--line-height);
+    font-weight: var(--text-body-caption--weight);
+  }
+
+  .text-body-main {
+    font-size: var(--text-body-main);
+    line-height: var(--text-body-main--line-height);
+    font-weight: var(--text-body-main--weight);
+  }
+
+  .text-body-small {
+    font-size: var(--text-body-small);
+    line-height: var(--text-body-small--line-height);
+    font-weight: var(--text-body-small--weight);
+  }
+
+  .text-display-big {
+    font-size: var(--text-display-big);
+    line-height: var(--text-display-big--line-height);
+    font-weight: var(--text-display-big--weight);
+  }
+
+  .text-h1 {
+    font-size: var(--text-h1);
+    line-height: var(--text-h1--line-height);
+    font-weight: var(--text-h1--weight);
+    font-family: var(--text-hi--font);
+  }
+
+  .text-h3 {
+    font-size: var(--text-h3);
+    line-height: var(--text-h3--line-height);
+    font-weight: var(--text-h3--weight);
+  }
+
+  .text-h6 {
+    font-size: var(--text-h6);
+    line-height: var(--text-h6--line-height);
+    font-weight: var(--text-h6--weight);
+  }
+
+  .text-ios-body-emphasized {
+    font-size: var(--text-ios-body-emphasized);
+    line-height: var(--text-ios-body-emphasized--line-height);
+    font-weight: var(--text-ios-body-emphasized--weight);
+    letter-spacing: var(--text-ios-body-emphasized--tracking);
+  }
+
+  .text-ios-subheadline-emphasized {
+    font-size: var(--text-ios-subheadline-emphasized);
+    line-height: var(--text-ios-subheadline-emphasized--line-height);
+    font-weight: var(--text-ios-subheadline-emphasized--weight);
+    letter-spacing: var(--text-ios-subheadline-emphasized--tracking);
+  }
 }
