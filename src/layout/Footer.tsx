@@ -1,114 +1,124 @@
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Twitter,
-} from "lucide-react";
-import { Container } from "../components/Container";
+import Button from "../components/Button";
+import { Input } from "../components/Input";
+import { Separator } from "../components/separator";
+
+const footerLinks = {
+  product: ["How it works", "Testimonials", "Why Choose Us", "Delivery"],
+  information: ["Privacy policy", "Terms and conditions", "Support", "FAQ"],
+  contact: ["support@Renewly.com", "Instagram", "Twitter", "Facebook"],
+};
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <Container>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center mb-3">
-              <img src="/logo.svg" alt="logo" />
-            </div>
-            <p className="text-gray-400">
-              Your trusted partner for vehicle document renewal services.
+    <footer className="flex flex-col w-full items-center justify-center gap-10 pt-[50px] pb-5 px-6 sm:px-12 lg:px-[150px] bg-[#f2f2f2] rounded-[24px_24px_0px_0px] overflow-hidden">
+      <div className="flex flex-col w-full max-w-[1190px] gap-20">
+        {/* Newsletter */}
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="flex flex-col items-start gap-2">
+            <h2 className="font-headings-h6 text-black">
+              Subscribe to our Newsletter
+            </h2>
+            <p className="font-body-main-body text-[#333333]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <div className="flex space-x-3 mt-4">
-              <Facebook className="w-5 h-5 cursor-pointer hover:text-blue-400" />
-              <Twitter className="w-5 h-5 cursor-pointer hover:text-blue-400" />
-              <Instagram className="w-5 h-5 cursor-pointer hover:text-blue-400" />
-              <Linkedin className="w-5 h-5 cursor-pointer hover:text-blue-400" />
-            </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  FAQ
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  License Renewal
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Registration
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Insurance
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Permits
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-semibold mb-4">Contact Info</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" /> +234 123 456 7890
-              </li>
-              <li className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" /> support@renewly.com
-              </li>
-              <li className="flex items-center">
-                <MapPin className="w-4 h-4 mr-2" /> Lagos, Nigeria
-              </li>
-            </ul>
+          <div className="flex items-center gap-5 w-full md:w-auto">
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full md:w-[266px] px-4 py-0 bg-white border border-[#545454]/50 font-body-main-body text-[#333333]"
+            />
+            <Button
+              aria-label="Subscribe"
+              className="px-6 h-12 bg-black text-white font-body-button rounded-lg hover:bg-[#222]"
+            >
+              Subscribe
+            </Button>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>
-            &copy; 2024 Renewly. All rights reserved. | Privacy Policy | Terms
-            of Service
-          </p>
+        {/* Footer Links */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Logo + Description */}
+          <div className="flex flex-col items-start gap-5">
+            <img
+              className="w-[206px] h-10"
+              src="/logob.svg"
+              alt="Renewly Logo"
+            />
+            <p className="font-body-main-body text-[#333333]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis.
+            </p>
+            <Button className="px-6 py-3 bg-[#ec5730] text-white font-body-button rounded-lg hover:bg-[#d24e2b]">
+              Add To Homescreen
+            </Button>
+          </div>
+
+          {/* Product Links */}
+          <div className="flex flex-col items-start gap-4">
+            <h3 className="font-body-bold-body text-black">Product</h3>
+            {footerLinks.product.map((link, index) => (
+              <a
+                key={index}
+                href="#"
+                className="font-body-main-body text-[#333333] hover:text-black transition-colors"
+              >
+                {link}
+              </a>
+            ))}
+          </div>
+
+          {/* Information Links */}
+          <div className="flex flex-col items-start gap-4">
+            <h3 className="font-body-bold-body text-black">Information</h3>
+            {footerLinks.information.map((link, index) => (
+              <a
+                key={index}
+                href="#"
+                className="font-body-main-body text-[#333333] hover:text-black transition-colors"
+              >
+                {link}
+              </a>
+            ))}
+          </div>
+
+          {/* Contact Links */}
+          <div className="flex flex-col items-start gap-4">
+            <h3 className="font-body-bold-body text-black">Contact</h3>
+            {footerLinks.contact.map((link, index) => (
+              <a
+                key={index}
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body-main-body text-[#333333] hover:text-black transition-colors"
+              >
+                {link}
+              </a>
+            ))}
+          </div>
         </div>
-      </Container>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="flex flex-col w-full max-w-[1284px] items-center gap-4">
+        <Separator className="w-full h-px bg-[#b0b0b0]" />
+        <div className="flex flex-wrap items-center justify-center gap-1 text-center">
+          <img
+            className="w-[18px] h-[18px]"
+            src="/copyright.svg"
+            alt="Copyright"
+          />
+          <span className="font-body-small-body text-[#545454]">
+            Renewly.com...
+          </span>
+          <span className="font-body-small-body text-[#545454]">
+            All Rights Reserved, 2025.
+          </span>
+        </div>
+      </div>
     </footer>
   );
 };

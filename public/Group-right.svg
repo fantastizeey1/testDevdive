@@ -1,0 +1,18 @@
+<svg width="386" height="499" viewBox="0 0 386 499" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g opacity="0.25">
+<rect y="-89" width="502" height="707" fill="url(#pattern0_2001_1806)"/>
+<path d="M120.28 38.64C135.72 72.02 168.16 94.41 201.63 109.65C235.1 124.88 271 134.65 303.5 151.86C348.85 175.87 387.56 216.47 399.09 266.47C410.62 316.47 389.59 375.01 343.78 398.14C310.56 414.92 270.86 411.57 234.48 403.71C198.1 395.85 162.03 383.83 124.82 384.5C87.61 385.17 47.57 402.05 32.7 436.16C18.07 469.71 32.75 510.77 59.96 535.25C87.17 559.73 124.21 570.29 160.52 574.89C212.84 581.53 267.13 577.11 316.07 557.45C365.01 537.79 408.26 502.24 432.91 455.62C462.84 399.02 463.6 331.83 459.77 267.92C454.44 178.78 439.14 84.59 380.56 17.18C349.58 -18.47 307.09 -43.25 261.49 -54.97C238.66 -60.83 214.99 -63.46 191.43 -62.57C169 -61.71 141.31 -60.81 125.8 -41.88C108.36 -20.58 109.3 14.89 120.28 38.64Z" fill="url(#paint0_linear_2001_1806)"/>
+</g>
+<defs>
+<pattern id="pattern0_2001_1806" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_2001_1806"/>
+</pattern>
+<linearGradient id="paint0_linear_2001_1806" x1="26.9371" y1="257.517" x2="461.394" y2="257.517" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0065FF"/>
+<stop offset="0.2294" stop-color="#00265F"/>
+<stop offset="0.711" stop-color="#0065FF"/>
+<stop offset="1" stop-color="#00265F"/>
+</linearGradient>
+<image id="image0_2001_1806" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfYAAALDCAYAAADntCI/AAAACXBIWXMAAAsSAAALEgHS3X78AAAA"/>
+</defs>
+</svg>
