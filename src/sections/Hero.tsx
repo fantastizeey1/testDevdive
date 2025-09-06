@@ -3,7 +3,7 @@ import Button from "../components/Button";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden text-white bg-[#00265F] min-h-[700px] flex items-center pt-24 pb-20">
+    <section className=" w-full relative overflow-hidden overflow-x-hidden text-white bg-[#00265F] min-h-[700px] flex items-center pt-24 pb-20">
       {/* Background Video for Desktop (full video) */}
       <video
         className="hidden lg:block absolute inset-0 w-full h-full object-cover"
