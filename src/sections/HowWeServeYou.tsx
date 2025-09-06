@@ -56,7 +56,7 @@ export const HowWeServeYou = () => {
 
   return (
     <div className="w-full bg-[#003e9c]">
-      <section className="w-full bg-[#003e9c]  px-8 pt-12 pb-24 md:pb-4  flex flex-col lg:flex-row items-start gap-12 h-screen md:h-[150%] lg:h-[600px] relative lg:px-[150px] mx-auto max-w-[1440px]">
+      <section className="w-full bg-[#003e9c]  px-8 pt-12 pb-24 md:pb-4  flex flex-col lg:flex-row items-start gap-12 h-[930px] md:h-[150%] lg:h-[600px] relative lg:px-[150px] mx-auto max-w-[1440px]">
         {/* Left Content */}
         <div
           className="flex flex-col md:justify-between md:flex-row lg:flex-col 
@@ -69,7 +69,7 @@ export const HowWeServeYou = () => {
           <img
             src="/arrow.svg"
             alt="arrow"
-            className="absolute top-[355px] left-[15px] md:top-[255px] md:left-[15px] lg:top-[135px] lg:left-[205px] w-[150px] "
+            className="absolute top-[395px] left-[15px] md:top-[255px] md:left-[15px] lg:top-[135px] lg:left-[205px] w-[150px] "
           />
 
           <div className="w-full md:w-[40%] lg:mt-36 lg:w-full">
@@ -92,7 +92,7 @@ export const HowWeServeYou = () => {
             src="/Frame.png"
             alt="steps"
             className="w-full max-w-[650px] 
-              mt-6 md:mt-8 lg:mt-0 h-auto lg:h-[660px] lg:absolute lg:left-[96px] lg:-top-18"
+              mt-20 md:mt-8 lg:mt-0 h-auto  lg:h-[660px] lg:absolute lg:left-[96px] lg:-top-18"
           />
         </div>
 

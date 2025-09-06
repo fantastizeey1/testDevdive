@@ -50,11 +50,13 @@ const Testimonials = () => {
   const looped = [...testimonials, ...testimonials];
 
   return (
-    <section className="w-full py-[100px] px-20 overflow-hidden">
+    <section className="w-full py-[50px] px-4 md:px-20 overflow-hidden">
       <div className="flex flex-col items-start gap-8">
         {/* Heading + Intro */}
         <header className="flex flex-col items-start justify-center gap-2.5 max-w-2xl">
-          <h1 className="text-h1 text-black">What Our Customers Are Saying</h1>
+          <h1 className="md:text-h1 leading-14 font-bold text-[50px]  text-black">
+            What Our Customers Are Saying
+          </h1>
           <p className="text-body-main text-[#333333]">
             Lorem ipsum dolor sit amet consectetur. Tortor ipsum turpis blandit
             a congue platea tristique tellus. Lacus amet viverra gravida amet.
@@ -69,7 +71,7 @@ const Testimonials = () => {
         >
           {looped.map((testimonial, index) => (
             <React.Fragment key={index}>
-              <Card className="flex-shrink-0 w-[296px] border-none shadow-md bg-white/90 rounded-xl backdrop-blur-sm mx-4">
+              <Card className="flex-shrink-0 w-[296px] border-none  bg-white/90 rounded-xl backdrop-none shadow-none mx-4">
                 <CardContent className="flex flex-col items-start gap-4 p-4">
                   {renderStars(testimonial.rating)}
 

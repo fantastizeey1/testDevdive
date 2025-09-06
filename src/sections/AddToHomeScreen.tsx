@@ -17,7 +17,7 @@ const AddToHomeScreen = () => {
       <img
         src="/g1.svg"
         alt="Isometric view"
-        className="absolute left-[35%] bottom-0 z-50"
+        className="absolute md:left-[35%] bottom-0 z-30"
       />
       <img
         src="/Left view.png"

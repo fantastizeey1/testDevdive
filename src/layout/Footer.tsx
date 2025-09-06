@@ -10,28 +10,28 @@ const footerLinks = {
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col w-full items-center justify-center gap-10 pt-[50px] pb-5 px-6 sm:px-12 lg:px-[150px] bg-[#f2f2f2] rounded-[24px_24px_0px_0px] overflow-hidden">
+    <footer className="flex flex-col w-full items-center justify-center gap-10 pt-[50px] pb-5 px-6 sm:px-12 lg:px-[150px] bg-[#f2f2f2] rounded-t-3xl overflow-hidden">
       <div className="flex flex-col w-full max-w-[1190px] gap-20">
         {/* Newsletter */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex flex-col items-start gap-2">
-            <h2 className="font-headings-h6 text-black">
+            <h2 className="text-2xl font-bold text-black">
               Subscribe to our Newsletter
             </h2>
-            <p className="font-body-main-body text-[#333333]">
+            <p className="text-[#333333] text-base leading-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
           </div>
 
-          <div className="flex items-center gap-5 w-full md:w-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full md:w-auto">
             <Input
               type="email"
               placeholder="Enter your email"
-              className="w-full md:w-[266px] px-4 py-0 bg-white border border-[#545454]/50 font-body-main-body text-[#333333]"
+              className="w-full sm:w-[266px] px-4 py-3 bg-white border border-[#545454]/50 text-[#333333] rounded-lg"
             />
             <Button
               aria-label="Subscribe"
-              className="px-6 h-12 bg-black text-white font-body-button rounded-lg hover:bg-[#222]"
+              className="px-6 h-12 bg-black text-white rounded-lg hover:bg-[#222]"
             >
               Subscribe
             </Button>
@@ -39,84 +39,85 @@ const Footer = () => {
         </div>
 
         {/* Footer Links */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo + Description */}
-          <div className="flex flex-col items-start gap-5">
+          <div className="md:col-span-4 lg:col-span-1 flex flex-col items-start gap-5">
             <img
               className="w-[206px] h-10"
               src="/logob.svg"
               alt="Renewly Logo"
             />
-            <p className="font-body-main-body text-[#333333]">
+            <p className="text-[#333333] text-base md:w-1/2 leading-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis.
             </p>
-            <Button className="px-6 py-3 bg-[#ec5730] text-white font-body-button rounded-lg hover:bg-[#d24e2b]">
+            <Button className="px-6 py-3 bg-[#ec5730] text-white rounded-lg hover:bg-[#d24e2b]">
               Add To Homescreen
             </Button>
           </div>
 
-          {/* Product Links */}
-          <div className="flex flex-col items-start gap-4">
-            <h3 className="font-body-bold-body text-black">Product</h3>
-            {footerLinks.product.map((link, index) => (
-              <a
-                key={index}
-                href="#"
-                className="font-body-main-body text-[#333333] hover:text-black transition-colors"
-              >
-                {link}
-              </a>
-            ))}
-          </div>
+          {/* Three link columns side by side at md */}
+          <div className="md:col-span-4 lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-12">
+            {/* Product Links */}
+            <div className="flex flex-col items-start gap-4">
+              <h3 className="font-semibold text-black">Product</h3>
+              {footerLinks.product.map((link, index) => (
+                <a
+                  key={index}
+                  href="#"
+                  className="text-[#333333] hover:text-black transition-colors"
+                >
+                  {link}
+                </a>
+              ))}
+            </div>
 
-          {/* Information Links */}
-          <div className="flex flex-col items-start gap-4">
-            <h3 className="font-body-bold-body text-black">Information</h3>
-            {footerLinks.information.map((link, index) => (
-              <a
-                key={index}
-                href="#"
-                className="font-body-main-body text-[#333333] hover:text-black transition-colors"
-              >
-                {link}
-              </a>
-            ))}
-          </div>
+            {/* Information Links */}
+            <div className="flex flex-col items-start gap-4">
+              <h3 className="font-semibold text-black">Information</h3>
+              {footerLinks.information.map((link, index) => (
+                <a
+                  key={index}
+                  href="#"
+                  className="text-[#333333] hover:text-black transition-colors"
+                >
+                  {link}
+                </a>
+              ))}
+            </div>
 
-          {/* Contact Links */}
-          <div className="flex flex-col items-start gap-4">
-            <h3 className="font-body-bold-body text-black">Contact</h3>
-            {footerLinks.contact.map((link, index) => (
-              <a
-                key={index}
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-body-main-body text-[#333333] hover:text-black transition-colors"
-              >
-                {link}
-              </a>
-            ))}
+            {/* Contact Links */}
+            <div className="flex flex-col items-start gap-4">
+              <h3 className="font-semibold text-black">Contact</h3>
+              {footerLinks.contact.map((link, index) => (
+                <a
+                  key={index}
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#333333] hover:text-black transition-colors"
+                >
+                  {link}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="flex flex-col w-full max-w-[1284px] items-center gap-4">
-        <Separator className="w-full h-px bg-[#b0b0b0]" />
-        <div className="flex flex-wrap items-center justify-center gap-1 text-center">
-          <img
-            className="w-[18px] h-[18px]"
-            src="/copyright.svg"
-            alt="Copyright"
-          />
-          <span className="font-body-small-body text-[#545454]">
-            Renewly.com...
-          </span>
-          <span className="font-body-small-body text-[#545454]">
-            All Rights Reserved, 2025.
-          </span>
+        {/* Bottom Bar */}
+        <div className="flex flex-col w-full max-w-[1284px] items-center gap-4">
+          <Separator className="w-full h-px bg-[#b0b0b0]" />
+          <div className="flex flex-wrap items-center justify-center gap-1 text-center">
+            <img
+              className="w-[18px] h-[18px]"
+              src="/copyright.svg"
+              alt="Copyright"
+            />
+            <span className="text-[#545454] text-sm">Renewly.com...</span>
+            <span className="text-[#545454] text-sm">
+              All Rights Reserved, 2025.
+            </span>
+          </div>
         </div>
       </div>
     </footer>
