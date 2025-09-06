@@ -47,7 +47,7 @@ const Footer = () => {
               src="/logob.svg"
               alt="Renewly Logo"
             />
-            <p className="text-[#333333] text-base md:w-1/2 leading-6">
+            <p className="text-[#333333] text-base md:w-1/2 lg:w-full leading-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis.
             </p>

@@ -35,9 +35,9 @@ const FAQ = () => {
   return (
     <section className="flex flex-col lg:flex-row w-full items-center gap-10 lg:gap-16 px-4 md:px-12 lg:px-20 py-12 md:py-16 lg:py-24 relative">
       {/* FAQ Card */}
-      <div className=" w-full lg:w-1/2 h-[300px] md:h-[400px] lg:h-[600px] relative">
+      <div className=" w-full lg:w-1/2 h-[300px] md:h-[400px] lg:h-[500px] relative">
         <img
-          className="absolute left-[10%] md:inset-1 object-cover -rotate-[2.89deg] w-fit h-[300px] md:h-[400px] md:ml-[25%]"
+          className="absolute left-[10%] md:inset-1 object-cover -rotate-[2.89deg] w-fit h-[300px] md:h-[400px] md:ml-[25%] lg:h-[500px] lg:ml-[10%]"
           alt="FAQ card"
           src="/faq-card.png"
         />

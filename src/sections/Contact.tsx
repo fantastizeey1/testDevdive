@@ -68,7 +68,7 @@ const Contact = () => {
                 </div>
 
                 {index === 0 && (
-                  <Separator className="w-1/2 sm:block lg:w-full h-[1px]  bg-[#5E5E5E]" />
+                  <Separator className="w-1/2  h-[1px]  bg-[#5E5E5E]" />
                 )}
               </React.Fragment>
             ))}
