@@ -3,6 +3,14 @@ import Button from "../components/Button";
 import { X } from "lucide-react";
 import { Container } from "../components/Container";
 
+const navLinks = [
+  { label: "Services", href: "#services" },
+  { label: "Vehicles", href: "#vehicles" },
+  { label: "How it Works", href: "#process" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Contact", href: "#contact" },
+];
+
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -15,13 +23,17 @@ const Header = () => {
             <img src="/logo.svg" alt="logo" />
           </div>
 
-          {/* Desktop Nav (lg and up only) */}
+          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center space-x-8 text-white">
-            <a href="#services">Services</a>
-            <a href="#vehicles">Vehicles</a>
-            <a href="#process">How it Works</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+              >
+                {link.label}
+              </a>
+            ))}
           </nav>
 
           {/* Buttons - visible on md and up */}
@@ -46,7 +58,7 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Mobile Menu Toggle (only < md) */}
+          {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2"
@@ -60,13 +72,16 @@ const Header = () => {
         </div>
       </Container>
 
-      {/* Mobile Menu (only < md) */}
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <Container className="h-screen">
             <div className="flex flex-col justify-between h-[8">
               <nav className="py-4 space-y-3">
-                <a href="#services" className="block py-2 text-gray-700">
+                <a
+                  href="#services"
+                  className="block hover:cursor-pointer py-2 text-gray-700"
+                >
                   Services
                 </a>
                 <a href="#vehicles" className="block py-2 text-gray-700">
@@ -83,18 +98,20 @@ const Header = () => {
                 </a>
               </nav>
               <div className=" flex flex-row pt-4 space-x-7 itenc-center">
-                <div className="bg-white border-2 border-blue-600 p-[6px] rounded-xl">
-                  <Button
-                    className="bg-white py-1 px-3
-               text-blue-600 shadow-none hover:bg-white hover:shadow-none"
-                  >
-                    Check Estimate
+                <div className="flex flex-row pt-4 space-x-7 items-center">
+                  <div className="bg-white border-2 border-blue-600 p-[6px] rounded-xl">
+                    <Button
+                      className="bg-white py-1 px-3
+                     text-blue-600 shadow-none hover:bg-white hover:shadow-none"
+                    >
+                      Check Estimate
+                    </Button>
+                  </div>
+
+                  <Button className="text-white rounded-xl py-3 px-5 bg-button">
+                    Get Started
                   </Button>
                 </div>
-
-                <Button className="text-white rounded-xl py-1 px-5 bg-button">
-                  Get Started
-                </Button>
               </div>
             </div>
           </Container>
