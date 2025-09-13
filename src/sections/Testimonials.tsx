@@ -2,6 +2,7 @@ import { StarIcon } from "lucide-react";
 import React from "react";
 import { Separator } from "../components/separator";
 import { Card, CardContent } from "../components/Card";
+import { Container } from "../components/Container";
 
 const Testimonials = () => {
   const testimonials = [
@@ -51,56 +52,58 @@ const Testimonials = () => {
 
   return (
     <section className="w-full py-[50px] px-4 md:px-20 overflow-hidden">
-      <div className="flex flex-col items-start gap-8">
-        {/* Heading + Intro */}
-        <header className="flex flex-col items-start justify-center gap-2.5 max-w-2xl">
-          <h1 className="md:text-h1 leading-14 font-bold text-[50px]  text-black">
-            What Our Customers Are Saying
-          </h1>
-          <p className="text-body-main text-[#333333]">
-            Lorem ipsum dolor sit amet consectetur. Tortor ipsum turpis blandit
-            a congue platea tristique tellus. Lacus amet viverra gravida amet.
-            Risus sed quis molestie ac turpis in.
-          </p>
-        </header>
+      <Container className="overflow-hidden">
+        <div className="flex flex-col items-start gap-8">
+          {/* Heading + Intro */}
+          <header className="flex flex-col items-start justify-center gap-2.5 max-w-2xl">
+            <h1 className="md:text-h1 leading-14 font-bold text-[50px]  text-black">
+              What Our Customers Are Saying
+            </h1>
+            <p className="text-body-main text-[#333333]">
+              Lorem ipsum dolor sit amet consectetur. Tortor ipsum turpis
+              blandit a congue platea tristique tellus. Lacus amet viverra
+              gravida amet. Risus sed quis molestie ac turpis in.
+            </p>
+          </header>
 
-        {/* Infinite Scrolling Testimonials with Separators */}
-        <div
-          className="flex w-max animate-[marquee_25s_linear_infinite]"
-          style={{ "--gap": "2rem" } as React.CSSProperties}
-        >
-          {looped.map((testimonial, index) => (
-            <React.Fragment key={index}>
-              <Card className="flex-shrink-0 w-[296px] border-none  bg-white/90 rounded-xl backdrop-none shadow-none mx-4">
-                <CardContent className="flex flex-col items-start gap-4 p-4">
-                  {renderStars(testimonial.rating)}
+          {/* Infinite Scrolling Testimonials with Separators */}
+          <div
+            className="flex w-max animate-[marquee_25s_linear_infinite]"
+            style={{ "--gap": "2rem" } as React.CSSProperties}
+          >
+            {looped.map((testimonial, index) => (
+              <React.Fragment key={index}>
+                <Card className="flex-shrink-0 w-[296px] border-none  bg-white/90 rounded-xl backdrop-none shadow-none mx-4">
+                  <CardContent className="flex flex-col items-start gap-4 p-4">
+                    {renderStars(testimonial.rating)}
 
-                  <blockquote className="text-body-big text-black">
-                    {testimonial.quote}
-                  </blockquote>
+                    <blockquote className="text-body-big text-black">
+                      {testimonial.quote}
+                    </blockquote>
 
-                  <div className="flex flex-col items-start gap-1">
-                    <cite className="text-body-small text-black not-italic">
-                      {testimonial.author}
-                    </cite>
-                    <span className="text-body-caption text-[#545454]">
-                      {testimonial.vehicle}
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
+                    <div className="flex flex-col items-start gap-1">
+                      <cite className="text-body-small text-black not-italic">
+                        {testimonial.author}
+                      </cite>
+                      <span className="text-body-caption text-[#545454]">
+                        {testimonial.vehicle}
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
 
-              {/* Add separator between cards */}
-              {index < looped.length - 1 && (
-                <Separator
-                  orientation="vertical"
-                  className="h-[203px] bg-[#ebedf0] my-auto"
-                />
-              )}
-            </React.Fragment>
-          ))}
+                {/* Add separator between cards */}
+                {index < looped.length - 1 && (
+                  <Separator
+                    orientation="vertical"
+                    className="h-[203px] bg-[#ebedf0] my-auto"
+                  />
+                )}
+              </React.Fragment>
+            ))}
+          </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

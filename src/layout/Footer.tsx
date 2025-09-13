@@ -10,8 +10,8 @@ const footerLinks = {
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col w-full items-center justify-center gap-10 pt-[50px] pb-5 px-6 sm:px-12 lg:px-[150px] bg-[#f2f2f2] rounded-t-3xl overflow-hidden">
-      <div className="flex flex-col w-full max-w-[1190px] gap-20">
+    <footer className="flex flex-col w-full items-center justify-center gap-10 pt-[50px] pb-5 px-6 sm:px-12 xl:px-[150px] bg-[#f2f2f2] rounded-t-3xl overflow-hidden">
+      <div className="flex flex-col w-full max-w-[1350px] gap-20">
         {/* Newsletter */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex flex-col items-start gap-2">
@@ -51,7 +51,7 @@ const Footer = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
               vulputate libero et velit interdum, ac aliquet odio mattis.
             </p>
-            <Button className="px-6 py-3 bg-[#ec5730] text-white rounded-lg hover:bg-[#d24e2b]">
+            <Button className="xl:px-6 xl:py-3 px-4 py-2 bg-[#ec5730] text-white rounded-lg hover:bg-[#d24e2b]">
               Add To Homescreen
             </Button>
           </div>
