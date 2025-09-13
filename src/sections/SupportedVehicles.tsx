@@ -33,7 +33,7 @@ const vehicleCategories = [
 
 const SupportedVehicles = () => {
   return (
-    <section className="flex flex-col w-full items-start gap-8 pt-24 px-4 md:px-10 xl:px-[157px] pb-12 relative">
+    <section className="flex flex-col w-full items-start gap-8 pt-24 px-4 md:px-10 xl:px-40 pb-12 relative">
       <Container>
         <h2 className="text-h1 font-heading font-bold text-black tracking-tight leading-[1.1]">
           Supported Vehicles
